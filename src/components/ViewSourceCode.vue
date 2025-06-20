@@ -1,11 +1,6 @@
 <template>
-  <button
-    class="bg-[#0488e0] text-center w-60 rounded-2xl h-12 cursor-pointer relative text-black font-bold group"
-    type="button"
-  >
-    <div
-      class="bg-[#006bb3] rounded-xl h-10 w-1/4 flex items-center justify-center absolute left-1 top-[4px] group-hover:w-[232px] z-10 duration-500"
-    >
+  <button class="custom-button" type="button">
+    <div class="button-icon-container">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1024 1024"
@@ -23,9 +18,70 @@
           ></path>
         </g>
       </svg>
-
     </div>
-    <p class="translate-x-5 text-white font-bold text-base q-mt-sm q-pt-xs q-ml-sm">View Source Code</p>
+    <p class="button-text">View Source Code</p>
   </button>
 </template>
-Footer
+
+<style scoped>
+.custom-button {
+  background-color: #0488e0;
+  text-align: center;
+  width: 15rem; /* 60 x 0.25rem */
+  height: 3.3rem; /* 12 x 0.25rem */
+  border-radius: 1rem; /* 2xl */
+  position: relative;
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.button-icon-container {
+  background-color: #006bb3;
+  border-radius: 0.75rem; /* xl */
+  height: 2.5rem; /* 10 x 0.25rem */
+  width: 25%;
+  position: absolute;
+  top: 4px;
+  left: 0.25rem; /* 1 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: width 0.5s ease;
+}
+
+.custom-button:hover .button-icon-container {
+  width: 14.2rem; /* ~232px */
+}
+
+.button-text {
+  color: white;
+  font-weight: bold;
+  font-size: 1rem; /* base */
+  transform: translateX(1.25rem); /* translate-x-5 */
+  margin-top: 0.4rem; /* q-mt-sm */
+  padding-top: 0.25rem; /* q-pt-xs */
+  margin-left: 0.5rem; /* q-ml-sm */
+}
+
+@media (max-width: 375px) {
+  .button-text {
+    font-size: 13px;
+  }
+
+  .custom-button:hover .button-icon-container {
+    width: 13rem; /* ~232px */
+  }
+}
+@media (max-width: 320px) {
+  .button-text {
+    font-size: 13px;
+  }
+
+  .custom-button:hover .button-icon-container {
+    width: 11.2rem; /* ~232px */
+  }
+}
+</style>
