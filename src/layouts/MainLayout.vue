@@ -3,7 +3,7 @@
     <q-header class="header-bg">
       <q-toolbar>
         <q-toolbar-title>
-          <div class="row q-pl-lg q-pt-md  q-pr-lg">
+          <div class="row q-pl-md q-pt-sm  q-pr-md q-pb-sm">
             <div class="col-6 row items-center justify-start">
               <label class="cursor-pointer"
               @click="githubAcct">@Phlwin722</label>
@@ -69,6 +69,7 @@
                     ></path>
                   </g>
                 </svg>
+                
                 <svg
                   viewBox="0 0 24 24"
                   class="moon"
@@ -244,6 +245,10 @@ body.dark-mode .header-bg {
   background: linear-gradient(to right, #000000, #212627);
 }
 
+.q-toolbar{
+  margin: 0;
+  padding: 0;
+}
 
 
 </style>
