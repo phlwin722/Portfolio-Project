@@ -5,6 +5,11 @@ import { defineConfig } from '#q-app/wrappers'
 
 export default defineConfig((/* ctx */) => {
   return {
+
+    htmlVariables: {
+      productName: 'Dexter Jamero | Portfolio',
+      productDescription: 'Front-end Developer | Full-stack Developer | Software Developer | Software Engineer'
+    },
     // https://v2.quasar.dev/quasar-cli-vite/prefetch-feature
     // preFetch: true,
 
