@@ -1,5 +1,8 @@
 <template>
-  <q-page class="q-pa-md q-pl-xl q-pr-xl" :class="{ 'dark-gradient-bg': $q.dark.isActive }">
+  <q-page
+    class="q-pa-md containerr"
+    :class="{ 'dark-gradient-bg': $q.dark.isActive }"
+  >
     <!-- Intro Section -->
     <div class="q-mb-md card-intro" style="height: 75vh">
       <div class="row">
@@ -520,6 +523,11 @@ const portfolio = async () => {
   color: white;
 }
 
+.containerr {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
 p {
   font-size: 15px;
 }
@@ -695,7 +703,7 @@ span {
 
 @media (min-width: 376px) and (max-width: 425px) {
   .project-card {
-    height: 580px;
+    height: 560px;
     margin: 10px;
     padding: 18px;
   }
@@ -710,12 +718,17 @@ span {
 
   .project-btn {
     width: 190px;
+  }
+
+  .containerr {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
 @media (min-width: 321px) and (max-width: 375px) {
   .project-card {
-    height: 550px;
+    height: 600px;
     margin: 10px;
     padding: 18px;
   }
@@ -730,6 +743,11 @@ span {
 
   .project-btn {
     width: 190px;
+  }
+
+  .containerr {
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 
@@ -738,6 +756,11 @@ span {
     height: 680px;
     margin: 10px;
     padding: 18px;
+  }
+
+  .containerr {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .disapeard {
