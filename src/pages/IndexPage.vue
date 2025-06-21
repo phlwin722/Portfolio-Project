@@ -1,5 +1,5 @@
 <template>
-  <q-page class="q-pa-md" :class="{ 'dark-gradient-bg': $q.dark.isActive }">
+  <q-page class="q-pa-md q-pl-xl q-pr-xl" :class="{ 'dark-gradient-bg': $q.dark.isActive }">
     <!-- Intro Section -->
     <div class="q-mb-md card-intro" style="height: 75vh">
       <div class="row">

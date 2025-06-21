@@ -3,9 +3,9 @@
     <q-header class="header-bg">
       <q-toolbar>
         <q-toolbar-title>
-          <div class="row q-pl-md q-pt-sm  q-pr-md q-pb-sm">
+          <div class="row q-pl-xl q-pt-sm  q-pr-xl q-pb-sm">
             <div class="col-6 row items-center justify-start">
-              <label class="cursor-pointer" style="font-size: 18px;"
+              <label class="cursor-pointer" style="font-size: 17px;"
               @click="githubAcct">@Phlwin722</label>
             </div>
             <div class="col-6 row items-center justify-end">
