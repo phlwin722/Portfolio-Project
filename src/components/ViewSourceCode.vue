@@ -66,16 +66,26 @@
   margin-left: 0.5rem; /* q-ml-sm */
 }
 
-@media (max-width: 375px) {
+@media (min-width: 426px) and (max-width: 767px) {
   .button-text {
-    font-size: 13px;
+    font-size: 14px;
+  }
+
+  .custom-button {
+    width: 14rem;
+    height: 2.8rem;
+  }
+
+  .button-icon-container {
+    height: 2rem;
   }
 
   .custom-button:hover .button-icon-container {
-    width: 13rem; /* ~232px */
+    width: 13.2rem; /* ~232px */
   }
 }
-@media (max-width: 320px) {
+
+@media (min-width: 320px) and (max-width: 425px) {
   .button-text {
     font-size: 13px;
   }

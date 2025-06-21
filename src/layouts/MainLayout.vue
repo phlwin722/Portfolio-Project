@@ -3,7 +3,7 @@
     <q-header class="header-bg">
       <q-toolbar>
         <q-toolbar-title>
-          <div class="row q-pl-md q-pt-md  q-pr-md q-pb-sm">
+          <div class="row q-pl-md q-pt-sm  q-pr-md q-pb-sm">
             <div class="col-6 row items-center justify-start">
               <label class="cursor-pointer"
               @click="githubAcct">@Phlwin722</label>

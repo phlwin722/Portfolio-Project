@@ -497,20 +497,13 @@ const options = {
   focus: "center",
   trimSpace: false,
   breakpoints: {
-    495: {
+    767: {
       perPage: 1,
       height: "auto",
     },
-    700: {
-      perPage: 1,
-      height: "auto",
-    },
-    1024: {
+    768: {
       perPage: 2,
-    },
-
-    1280: {
-      perPage: 3,
+      height: "auto",
     },
   },
 };
@@ -551,7 +544,7 @@ const portfolio = async () => {
 }
 
 p {
-  font-size: 17px;
+  font-size: 15px;
 }
 
 .skills-col {
@@ -674,52 +667,32 @@ span {
   }
 }
 
-@media (max-width: 1279px) {
-  /* < xl */
-  .project-card {
-    height: 450px;
-    margin: 40px;
-  }
-
-  p {
-    font-size: 16px;
-  }
-
-  .block-center {
-    animation: appearFromRight 1s ease-out both;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40%;
-  }
-
-  .block-right {
-    animation: appear 1s ease-out both;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40%;
-  }
-}
-
-@media (max-width: 1225px) {
+@media (min-width: 1024px) and (max-width: 1439px) {
   .education {
-    margin-top: 290px;
+    margin-top: 200px;
   }
 
   /* < lg */
   .project-card {
-    height: 500px;
+    height: 460px;
     margin: 30px;
   }
+
+  .skills {
+    margin-top: 150px;
+  }
 }
 
-@media (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   /* < lg */
   .project-card {
-    height: 530px;
+    height: 540px;
     margin: 30px;
     width: 310px;
   }
 
   p {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .block-center {
@@ -733,28 +706,35 @@ span {
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
   }
+
+  .education {
+    margin-top: 25.1rem;
+  }
 }
 
-@media (max-width: 767px) {
+@media (min-width: 426px) and (max-width: 767px) {
   /* < md */
   .project-card {
-    height: 490px;
+    height: 530px;
     margin: 20px;
   }
-}
 
-@media (max-width: 639px) {
-  /* < sm */
-  .project-card {
-    height: 520px;
-    margin: 10px;
+  .disapeard {
+    display: none;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .education {
+    margin-top: 55.1rem;
   }
 }
 
-@media (max-width: 480px) {
+@media (min-width: 376px) and (max-width: 425px) {
   .project-card {
-    height: 600px;
-    max-width: 280px;
+    height: 580px;
     margin: 10px;
     padding: 18px;
   }
@@ -763,61 +743,81 @@ span {
     display: none;
   }
 
-  span {
-    font-size: 10px;
+  p {
+    font-size: 13px;
+  }
+  .skills {
+    margin-top: 80px;
   }
 
   .education {
     margin-top: 1000px;
   }
 
-  p {
-    font-size: 14px;
+  .project-btn {
+    width: 190px;
   }
 }
 
-@media (max-width: 375px) {
+@media (min-width: 321px) and (max-width: 375px) {
   .project-card {
-    height: 650px;
-    max-width: 250px;
+    height: 640px;
     margin: 10px;
     padding: 18px;
   }
 
+  .disapeard {
+    display: none;
+  }
+
+  p {
+    font-size: 13px;
+  }
   .skills {
     margin-top: 100px;
   }
 
   .education {
-    margin-top: 1200px;
+    margin-top: 1100px;
   }
 
   .project-btn {
-    width: 220px;
+    width: 190px;
   }
 }
 
 @media (max-width: 320px) {
   .project-card {
-    height: 650px;
-    max-width: 210px;
+    height: 800px;
     margin: 10px;
     padding: 18px;
   }
 
+  .disapeard {
+    display: none;
+  }
+
   p {
-    font-size: 11px;
+    font-size: 13px;
   }
   .skills {
     margin-top: 100px;
   }
 
   .education {
-    margin-top: 1200px;
+    margin-top: 1100px;
   }
 
   .project-btn {
     width: 190px;
+  }
+
+  .skills {
+    margin-top: 190px;
+  }
+
+  span {
+    font-size: 11px;
   }
 }
 </style>
