@@ -3,9 +3,9 @@
     <q-header class="header-bg">
       <q-toolbar>
         <q-toolbar-title>
-          <div class="row q-pl-md q-pt-sm  q-pr-md q-pb-sm">
+          <div class="row q-pl-xl q-pt-sm  q-pr-xl q-pb-sm">
             <div class="col-6 row items-center justify-start">
-              <label class="cursor-pointer"
+              <label class="cursor-pointer" style="font-size: 17px;"
               @click="githubAcct">@Phlwin722</label>
             </div>
             <div class="col-6 row items-center justify-end">
@@ -160,8 +160,8 @@ const githubAcct = async() => {
 }
 
 .label {
-  width: 70px;
-  height: 35px;
+  width: 60px;
+  height: 25px;
   background: #ebebeb;
   display: block;
   border-radius: 200px;
@@ -174,10 +174,10 @@ const githubAcct = async() => {
 
 .label:after {
   content: "";
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   position: absolute;
-  top: 5px;
+  top: 3px;
   left: 5px;
   background: linear-gradient(180deg, #ffcc89, #d8860b);
   border-radius: 50%;
@@ -196,30 +196,30 @@ input:checked + .label {
 }
 
 input:checked + .label:after {
-  left: 65px;
+  left: 55px;
   transform: translateX(-100%);
   background: linear-gradient(180deg, #777, #3a3a3a);
 }
 
 .label:active:after {
-  width: 33px;
+  width: 25px;
 }
 
 .label svg {
   position: absolute;
-  width: 18px;
+  width: 17px;
   z-index: 100px;
-  top: 8px;
+  top: 4px;
 }
 
 .label svg.sun {
-  left: 10px;
+  left: 7px;
   fill: #fff;
   transition: 0.3s;
 }
 
 .label svg.moon {
-  left: 42px;
+  left: 37px;
   fill: #7e7e7e;
   transition: 0.3s;
 }
