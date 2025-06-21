@@ -3,10 +3,14 @@
     <q-header class="header-bg">
       <q-toolbar>
         <q-toolbar-title>
-          <div class="row q-pl-xl q-pt-sm  q-pr-xl q-pb-sm">
+          <div class="row q-pt-sm containerr q-pb-sm">
             <div class="col-6 row items-center justify-start">
-              <label class="cursor-pointer" style="font-size: 17px;"
-              @click="githubAcct">@Phlwin722</label>
+              <label
+                class="cursor-pointer"
+                style="font-size: 17px"
+                @click="githubAcct"
+                >@Phlwin722</label
+              >
             </div>
             <div class="col-6 row items-center justify-end">
               <input
@@ -69,7 +73,7 @@
                     ></path>
                   </g>
                 </svg>
-                
+
                 <svg
                   viewBox="0 0 24 24"
                   class="moon"
@@ -144,14 +148,13 @@ const toggleDarkMode = () => {
 
 watch(isDarkMode, (enabled) => {
   document.body.classList.toggle("dark-mode", enabled);
-  
+
   console.log("Dark mode enabled:", enabled);
 });
 
-const githubAcct = async() => {
-  window.open('https://github.com/phlwin722', '_blank' )
-}
-
+const githubAcct = async () => {
+  window.open("https://github.com/phlwin722", "_blank");
+};
 </script>
 
 <style scoped>
@@ -240,15 +243,38 @@ input:checked + .label svg.sun {
 }
 
 /* Dark mode styles applied to body */
-body.dark-mode .header-bg {  
+body.dark-mode .header-bg {
   color: white;
   background: linear-gradient(to right, #000000, #212627);
 }
 
-.q-toolbar{
+.q-toolbar {
   margin: 0;
   padding: 0;
 }
+.containerr {
+  padding-left: 50px;
+  padding-right: 50px;
+}
 
+@media (min-width: 376px) and (max-width: 425px) {
+  .containerr {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
 
+@media (min-width: 321px) and (max-width: 375px) {
+  .containerr {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (max-width: 320px) {
+  .containerr {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
 </style>
