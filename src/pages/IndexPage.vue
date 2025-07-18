@@ -505,7 +505,7 @@ const multi_business = async () => {
 
 const cv = async () => {
   window.open(
-    "https://drive.google.com/file/d/1RUVZCgSOpSagu0cMQf5kOyuWq4AVhav2/view?usp=sharing",
+    "https://drive.google.com/file/d/1G_E1f8r4t4FE4bEW5tojZb3VWAN7VsQS/view?usp=sharing",
     "_blank"
   );
 };
