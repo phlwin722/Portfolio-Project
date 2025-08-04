@@ -53,6 +53,33 @@
           <SplideSlide data-splide-hash="slide1">
             <q-card class="project-card relative-position">
               <q-card-section>
+                <img class="project-img" width="400px" src="/queue-removebg-preview.png" />
+
+                <h6 class="q-mt-lg">
+                  Queueing System
+                </h6>
+                <div class="text-subtitle1 text-grey" style="margin-top: -50px">
+                  Project base (2025)
+                </div>
+                <p class="q-mt-lg">
+                  Designed and developed a queueing system to manage customer flow and reduce overcrowding
+                  inside the establishment. User scan a QR code to join the virtual queue remotely. Once registered, 
+                  they are free to wait in nearby areas. When user is within the next five in line, the system
+                  automatically notifies them via email to proceed to the establishment.
+                </p>
+              </q-card-section>
+              <q-card-actions>
+                <SourceCodeBtn
+                  class="project-button project-btn"
+                  @click="queue"
+                />
+              </q-card-actions>
+            </q-card>
+          </SplideSlide>
+
+          <SplideSlide data-splide-hash="slide1">
+            <q-card class="project-card relative-position">
+              <q-card-section>
                 <img class="project-img" width="400px" src="/mobile.png" />
 
                 <h6 class="q-mt-lg">
@@ -76,6 +103,7 @@
               </q-card-actions>
             </q-card>
           </SplideSlide>
+
           <SplideSlide data-splide-hash="slide2">
             <q-card class="project-card relative-position">
               <q-card-section>
@@ -418,25 +446,10 @@
             </div>
             <div class="col skills-container">
               <div>
-                <img width="55" src="/Csharp_Logo.png" />
-              </div>
-              <span>C#</span>
-            </div>
-          </div>
-          <div class="row q-mt-md">
-            <div class="col skills-container">
-              <div>
-                <img width="55" src="/Python.png" />
-              </div>
-              <span>Python</span>
-            </div>
-            <div class="col skills-container">
-              <div>
                 <img width="55" src="/Postman.png" />
               </div>
               <span>Postman</span>
             </div>
-            <div class="col"></div>
           </div>
         </q-card>
       </div>
@@ -488,6 +501,13 @@ const options = {
   },
 };
 
+const queue = async () => {
+  window.open (
+    "https://github.com/phlwin722/queueing_system",
+    "_blank"
+  )
+}
+
 const mobile = async () => {
   window.open(
     "https://github.com/phlwin722/Capstone_Project_Gps_Pet_Tracker",
@@ -505,7 +525,7 @@ const multi_business = async () => {
 
 const cv = async () => {
   window.open(
-    "https://drive.google.com/file/d/1G_E1f8r4t4FE4bEW5tojZb3VWAN7VsQS/view?usp=sharing",
+    "https://drive.google.com/file/d/14vN0N-dkTrnYOwL6xDqVXrrRt3KpbBCS/view?usp=sharing",
     "_blank"
   );
 };
