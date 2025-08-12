@@ -34,6 +34,9 @@
 
     <h3>Main Application</h3>
     <pre><code>{{ mainCode }}</code></pre>
+
+    <h3>Postman</h3>
+    <pre><code>{{ postMan }}</code></pre>
   </div>
 </template>
 
@@ -244,6 +247,8 @@ laravel --version
 
 create database junior_fullstack
 
+touch routes/api.php
+
 // Laravel’s app/Providers/RouteServiceProvider.php
 use Illuminate\Support\Facades\Route;
 
@@ -271,12 +276,13 @@ class User extends Authenticatable
 <?php 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
+use App\Http\Controllers\UserController;
 
 Route::get('/user', function (Request $request) {
   return $request->user();
 })->middleware('auth:sanctum');
 
-Route::prefix('auth')->controller()->group(function () {
+Route::prefix('auth')->controller(UserController::class)->group(function () {
   Route::post('/signin', 'Create');
   Route::post('/signup', 'Login');
   Route::middleware('auth:sanctum')->post('/logout', 'Logout');
@@ -499,11 +505,15 @@ class ProductController extends Controller
     {
         try {
             $product = Product::findOrFail($request->id);
-            $product->update($request->only(['product_name', 'price', 'quantity']));
+            
+            $data = $request->only(['first_name', 'last_name']);
 
+            if (!empty($request->password)) {
+              $data['password'] = bcrypt($request->password);
+            }
+            $product->update($data);
             return response()->json([
-                'product' => $product,
-                'message' => 'Updated successfully'
+              'user' => $user 
             ]);
         } catch (\Exception $E) {
             return response()->json([
@@ -566,6 +576,15 @@ createRoot(document.getElementById("root")).render(
   </StrictMode>
 );
 `;
+
+const postMan = `
+  postman checking
+  http://127.0.0.1:8000/api/crud/create
+  headers:
+  Accept: application/json
+  Content-Type: application/json
+  Authorization: Bearer 2|asda
+`
 </script>
 
 <style scoped>
@@ -575,7 +594,8 @@ createRoot(document.getElementById("root")).render(
   overflow-x: auto;
 }
 
-h2, h3 {
+h2,
+h3 {
   color: #333;
   margin-top: 20px;
   margin-bottom: 10px;
@@ -589,7 +609,7 @@ pre {
 }
 
 code {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: 14px;
   color: #333;
 }
