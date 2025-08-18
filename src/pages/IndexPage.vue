@@ -270,11 +270,11 @@
               <span>React</span>
             </div>
             <div class="col skills-container">
-
-            </div>
-            <div class="col skills-container">
-
-            </div>
+            <div>
+                <img width="50px" class="q-mt-sm q-mb-sm" src="/tailwind.png" />
+              </div>
+              <span>tailwind</span></div>
+            <div class="col  skills-container"></div>
           </div>
 
           <p class="text-subtitle1 text-left q-mt-md">Backend Developer</p>
@@ -542,7 +542,7 @@ const multi_business = async () => {
 
 const cv = async () => {
   window.open(
-    "https://drive.google.com/file/d/1Zb-u9vrubkShfycwBSrhg92Ntjkw2ReW/view?usp=sharing",
+    "https://drive.google.com/file/d/1vnfg16nHr7d7Ltnht-tMEty7pKKxbdl6/view?usp=sharing",
     "_blank"
   );
 };
