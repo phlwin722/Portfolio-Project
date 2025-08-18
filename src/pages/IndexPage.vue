@@ -53,19 +53,23 @@
           <SplideSlide data-splide-hash="slide1">
             <q-card class="project-card relative-position">
               <q-card-section>
-                <img class="project-img" width="400px" src="/queue-removebg-preview.png" />
+                <img
+                  class="project-img"
+                  width="400px"
+                  src="/queue-removebg-preview.png"
+                />
 
-                <h6 class="q-mt-lg">
-                  Queueing System
-                </h6>
+                <h6 class="q-mt-lg">Queueing System</h6>
                 <div class="text-subtitle1 text-grey" style="margin-top: -50px">
                   Project base (2025)
                 </div>
                 <p class="q-mt-lg">
-                  Designed and developed a queueing system to manage customer flow and reduce overcrowding
-                  inside the establishment. User scan a QR code to join the virtual queue remotely. Once registered, 
-                  they are free to wait in nearby areas. When user is within the next five in line, the system
-                  automatically notifies them via email to proceed to the establishment.
+                  Designed and developed a queueing system to manage customer
+                  flow and reduce overcrowding inside the establishment. User
+                  scan a QR code to join the virtual queue remotely. Once
+                  registered, they are free to wait in nearby areas. When user
+                  is within the next five in line, the system automatically
+                  notifies them via email to proceed to the establishment.
                 </p>
               </q-card-section>
               <q-card-actions>
@@ -257,6 +261,22 @@
               <span>Vue js</span>
             </div>
           </div>
+
+          <div class="row">
+            <div class="col skills-container">
+              <div>
+                <img width="50px" src="/react.png" />
+              </div>
+              <span>React</span>
+            </div>
+            <div class="col skills-container">
+
+            </div>
+            <div class="col skills-container">
+
+            </div>
+          </div>
+
           <p class="text-subtitle1 text-left q-mt-md">Backend Developer</p>
           <div class="row q-mt-md">
             <div class="col skills-container">
@@ -502,11 +522,8 @@ const options = {
 };
 
 const queue = async () => {
-  window.open (
-    "https://github.com/phlwin722/queueing_system",
-    "_blank"
-  )
-}
+  window.open("https://github.com/phlwin722/queueing_system", "_blank");
+};
 
 const mobile = async () => {
   window.open(
@@ -525,7 +542,7 @@ const multi_business = async () => {
 
 const cv = async () => {
   window.open(
-    "https://drive.google.com/file/d/14vN0N-dkTrnYOwL6xDqVXrrRt3KpbBCS/view?usp=sharing",
+    "https://drive.google.com/file/d/1Zb-u9vrubkShfycwBSrhg92Ntjkw2ReW/view?usp=sharing",
     "_blank"
   );
 };
@@ -554,7 +571,7 @@ p {
 
 .skills-col {
   max-width: 350px;
-  height: 540px;
+  height: 620px;
 }
 
 .card {
